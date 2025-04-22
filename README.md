@@ -1,26 +1,39 @@
 
 ```markdown
-# Miami GP 2025 Prediction Project
+## F1 2025 Race Predictions
 
 ## Overview
-This project is a data-driven attempt to predict the **qualifying times** and **race times** for the upcoming **2025 Miami Grand Prix**. As a passionate fan of Formula 1, I created this project to explore how historical data from previous races can be used to forecast future performance using machine learning models.
+This repository is dedicated to predicting the **qualifying times** and **race times** for all Formula 1 races in the **2025 season**. As a passionate fan of Formula 1, I aim to use historical data and machine learning models to forecast driver performances for each race. 
 
-The project leverages the **FastF1** library to extract historical race and qualifying data, and uses **Gradient Boosting Regressors** from scikit-learn to make predictions. The results include predicted qualifying and race times for the 2025 Miami GP, along with rankings based on predicted race performance.
+Each race will have its own dedicated script for predictions, starting with the **Miami GP 2025 Qualifying Prediction**. As the season progresses, I will add predictions for other races, making this repository a comprehensive hub for F1 2025 race predictions.
+
+The project leverages the **FastF1** library to extract historical race and qualifying data, and uses **Gradient Boosting Regressors** from scikit-learn to make predictions. The results include predicted qualifying and race times for each Grand Prix, along with rankings based on predicted race performance.
 
 ---
 
 ## Features
-- **Data Extraction**: Uses the FastF1 library to fetch historical data for the 2024 Miami GP (qualifying and race sessions).
-- **Qualifying Time Prediction**: Predicts qualifying times for the 2025 Miami GP using a machine learning model trained on historical qualifying data.
-- **Race Time Prediction**: Predicts race lap times for the 2025 Miami GP using predicted qualifying times as input.
+- **Race-Specific Predictions**: Each race in the 2025 season will have its own prediction script.
+- **Data Extraction**: Uses the FastF1 library to fetch historical data for qualifying and race sessions.
+- **Qualifying Time Prediction**: Predicts qualifying times for each race using machine learning models trained on historical data.
+- **Race Time Prediction**: Predicts race lap times using predicted qualifying times as input.
 - **Driver Rankings**: Ranks drivers based on their predicted race times.
 - **Model Evaluation**: Evaluates the performance of the machine learning models using Mean Absolute Error (MAE).
 
 ---
 
+## Current Predictions
+### Miami GP 2025
+The first prediction script in this repository focuses on the **Miami GP 2025**. It predicts:
+- **Qualifying Times**: Based on historical qualifying data from the 2024 Miami GP.
+- **Race Times**: Based on predicted qualifying times and historical race data.
+
+Future races will follow a similar structure, with separate scripts for each Grand Prix.
+
+---
+
 ## Project Workflow
 1. **Data Collection**:
-   - Historical data for the 2024 Miami GP is fetched using the FastF1 library.
+   - Historical data for each race is fetched using the FastF1 library.
    - Data includes lap times for both qualifying and race sessions.
 
 2. **Data Preprocessing**:
@@ -32,7 +45,7 @@ The project leverages the **FastF1** library to extract historical race and qual
    - A second **Gradient Boosting Regressor** is trained to predict race times using qualifying times as input.
 
 4. **Prediction**:
-   - The trained models are used to predict qualifying and race times for the 2025 Miami GP.
+   - The trained models are used to predict qualifying and race times for the upcoming race.
    - Predictions are made for a predefined list of drivers.
 
 5. **Driver Rankings**:
@@ -57,8 +70,8 @@ The project leverages the **FastF1** library to extract historical race and qual
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/MiamiGP2025Prediction.git
-   cd MiamiGP2025Prediction
+   git clone https://github.com/yourusername/F1-2025-Predictions.git
+   cd F1-2025-Predictions
    ```
 
 2. Create and activate a virtual environment:
@@ -73,7 +86,7 @@ The project leverages the **FastF1** library to extract historical race and qual
    pip install -r requirements.txt
    ```
 
-4. Run the script:
+4. Run the script for the desired race:
    ```bash
    python3 MiamiPrediction2025.py
    ```
@@ -82,7 +95,8 @@ The project leverages the **FastF1** library to extract historical race and qual
 
 ## Usage
 1. **Run the Script**:
-   - The script will fetch historical data, train the models, and output the predictions for the 2025 Miami GP.
+   - Each race will have its own script (e.g., `MiamiPrediction2025.py` for the Miami GP).
+   - The script will fetch historical data, train the models, and output the predictions for the selected race.
 
 2. **Output**:
    - Predicted qualifying times for each driver.
@@ -104,11 +118,12 @@ The project leverages the **FastF1** library to extract historical race and qual
 
 ## File Structure
 ```
-MiamiGP2025Prediction/
-├── MiamiPrediction2025.py   # Main script for predictions
+F1-2025-Predictions/
+├── MiamiPrediction2025.py   # Script for Miami GP predictions
 ├── f1_cache/                # Cache directory for FastF1 data
 ├── requirements.txt         # List of dependencies
-└── README.md                # Project documentation
+├── README.md                # Project documentation
+└── (Future scripts for other races will be added here)
 ```
 
 ---
@@ -117,20 +132,20 @@ MiamiGP2025Prediction/
 ### Qualifying Prediction Model
 - **Algorithm**: Gradient Boosting Regressor
 - **Input Features**: Historical qualifying times
-- **Target**: Qualifying times for the 2025 Miami GP
+- **Target**: Qualifying times for the selected race
 - **Evaluation Metric**: Mean Absolute Error (MAE)
 
 ### Race Prediction Model
 - **Algorithm**: Gradient Boosting Regressor
 - **Input Features**: Predicted qualifying times
-- **Target**: Race lap times for the 2025 Miami GP
+- **Target**: Race lap times for the selected race
 - **Evaluation Metric**: Mean Absolute Error (MAE)
 
 ---
 
 ## Data Sources
 - **FastF1 Library**: Provides historical Formula 1 data, including lap times, driver information, and session details.
-- **2024 Miami GP**: Used as the primary dataset for training the models.
+- **2024 Season Data**: Used as the primary dataset for training the models.
 
 ---
 
@@ -141,8 +156,9 @@ MiamiGP2025Prediction/
 ---
 
 ## Future Improvements
+- Add scripts for all 2025 races as the season progresses.
 - Incorporate additional features such as weather data, tire strategies, and car performance metrics.
-- Use data from multiple races to improve model generalization.
+- Use data from multiple seasons to improve model generalization.
 - Explore advanced machine learning models like neural networks for better predictions.
 
 ---
@@ -163,5 +179,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 If you have any questions or suggestions, feel free to reach out:
 - **Name**: Bharat Garsondiya
 - **Email**: contact@bharatgarsondiya.me
-- **GitHub**: [yourusername](https://github.com/bharatpatel7)
+- **GitHub**: [bharatpatel7](https://github.com/bharatpatel7)
 ```
+
+---
