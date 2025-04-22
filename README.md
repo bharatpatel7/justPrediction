@@ -1,5 +1,5 @@
 
-```markdown
+
 ## F1 2025 Race Predictions
 
 ## Overview
