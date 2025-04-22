@@ -108,9 +108,9 @@ Future races will follow a similar structure, with separate scripts for each Gra
    🏁 Predicted 2025 Miami GP Results 🏁
 
          Driver           QualifyingTime (s)    PredictedRaceTime (s)
-   1     Max Verstappen   78.12                 90.45
-   2     Charles Leclerc  78.45                 90.78
-   3     Lewis Hamilton   78.67                 91.12
+   1     Lewis Hamilton   78.12                 90.45
+   2     Oscar Piastri    78.45                 90.78
+   3     Charles Leclerc  78.67                 91.12
    ...
    ```
 
