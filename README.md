@@ -23,28 +23,28 @@ Each race will have its own dedicated script for predictions, starting with the 
 ### 1. Qualifying vs Race Times for 2024
 This scatter plot shows the relationship between qualifying times and race lap times for the 2024 Miami GP. Each point represents a driver's lap time.
 
-![Qualifying vs Race Times for 2024](qualifying_vs_race_times_2024.png)
+![Qualifying vs Race Times for 2024](Figure_1.png)
 
 ---
 
 ### 2. Predicted Qualifying Times for 2025
 This bar chart displays the predicted qualifying times for the 2025 Miami GP. Each bar represents a driver's predicted qualifying time.
 
-![Predicted Qualifying Times for 2025](predicted_qualifying_times_2025.png)
+![Predicted Qualifying Times for 2025](Figure_2.png)
 
 ---
 
 ### 3. Predicted Race Times for 2025
 This bar chart shows the predicted race times for the 2025 Miami GP. Each bar represents a driver's predicted race time.
 
-![Predicted Race Times for 2025](predicted_race_times_2025.png)
+![Predicted Race Times for 2025](Figure_2.png)
 
 ---
 
 ### 4. Qualifying Model Error Distribution
 This histogram visualizes the error distribution of the qualifying prediction model, based on the 2024 data. The error is the difference between the actual and predicted qualifying times.
 
-![Qualifying Model Error Distribution](qualifying_model_error_distribution.png)
+![Qualifying Model Error Distribution](Figure_2.png)
 
 ---
 
