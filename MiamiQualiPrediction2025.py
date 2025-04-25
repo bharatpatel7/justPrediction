@@ -66,3 +66,45 @@ print(qualifying_2025[["Driver", "QualifyingTime (s)", "PredictedRaceTime (s)"]]
 # Evaluate Models
 y_pred_q = qualifying_model.predict(X_test_q)
 print(f"\n🔍 Qualifying Model Error (MAE): {mean_absolute_error(y_test_q, y_pred_q):.2f} seconds")
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Graph 1: Qualifying vs Race Times for 2024
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=merged_data, x="QualifyingTime (s)", y="LapTime (s)", hue="Driver", palette="tab10")
+plt.title("2024 Miami GP: Qualifying vs Race Times")
+plt.xlabel("Qualifying Time (s)")
+plt.ylabel("Race Lap Time (s)")
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+# Graph 2: Predicted Qualifying Times for 2025
+plt.figure(figsize=(10, 6))
+sns.barplot(data=qualifying_2025, x="Driver", y="QualifyingTime (s)", palette="viridis")
+plt.title("Predicted Qualifying Times for 2025 Miami GP")
+plt.xlabel("Driver")
+plt.ylabel("Qualifying Time (s)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Graph 3: Predicted Race Times for 2025
+plt.figure(figsize=(10, 6))
+sns.barplot(data=qualifying_2025, x="Driver", y="PredictedRaceTime (s)", palette="coolwarm")
+plt.title("Predicted Race Times for 2025 Miami GP")
+plt.xlabel("Driver")
+plt.ylabel("Predicted Race Time (s)")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# Graph 4: Model Error for Qualifying Predictions
+plt.figure(figsize=(8, 5))
+sns.histplot(y_test_q - y_pred_q, kde=True, color="orange", bins=20)
+plt.title("Qualifying Model Error Distribution (2024 Data)")
+plt.xlabel("Prediction Error (s)")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.show()
