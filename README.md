@@ -1,13 +1,10 @@
 
-
-## F1 2025 Race Predictions
+# F1 2025 Race Predictions
 
 ## Overview
 This repository is dedicated to predicting the **qualifying times** and **race times** for all Formula 1 races in the **2025 season**. As a passionate fan of Formula 1, I aim to use historical data and machine learning models to forecast driver performances for each race. 
 
 Each race will have its own dedicated script for predictions, starting with the **Miami GP 2025 Qualifying Prediction**. As the season progresses, I will add predictions for other races, making this repository a comprehensive hub for F1 2025 race predictions.
-
-The project leverages the **FastF1** library to extract historical race and qualifying data, and uses **Gradient Boosting Regressors** from scikit-learn to make predictions. The results include predicted qualifying and race times for each Grand Prix, along with rankings based on predicted race performance.
 
 ---
 
@@ -18,6 +15,36 @@ The project leverages the **FastF1** library to extract historical race and qual
 - **Race Time Prediction**: Predicts race lap times using predicted qualifying times as input.
 - **Driver Rankings**: Ranks drivers based on their predicted race times.
 - **Model Evaluation**: Evaluates the performance of the machine learning models using Mean Absolute Error (MAE).
+
+---
+
+## Graphs and Visualizations
+
+### 1. Qualifying vs Race Times for 2024
+This scatter plot shows the relationship between qualifying times and race lap times for the 2024 Miami GP. Each point represents a driver's lap time.
+
+![Qualifying vs Race Times for 2024](qualifying_vs_race_times_2024.png)
+
+---
+
+### 2. Predicted Qualifying Times for 2025
+This bar chart displays the predicted qualifying times for the 2025 Miami GP. Each bar represents a driver's predicted qualifying time.
+
+![Predicted Qualifying Times for 2025](predicted_qualifying_times_2025.png)
+
+---
+
+### 3. Predicted Race Times for 2025
+This bar chart shows the predicted race times for the 2025 Miami GP. Each bar represents a driver's predicted race time.
+
+![Predicted Race Times for 2025](predicted_race_times_2025.png)
+
+---
+
+### 4. Qualifying Model Error Distribution
+This histogram visualizes the error distribution of the qualifying prediction model, based on the 2024 data. The error is the difference between the actual and predicted qualifying times.
+
+![Qualifying Model Error Distribution](qualifying_model_error_distribution.png)
 
 ---
 
@@ -108,9 +135,9 @@ Future races will follow a similar structure, with separate scripts for each Gra
    🏁 Predicted 2025 Miami GP Results 🏁
 
          Driver           QualifyingTime (s)    PredictedRaceTime (s)
-   1     Lewis Hamilton   78.12                 90.45
-   2     Oscar Piastri    78.45                 90.78
-   3     Charles Leclerc  78.67                 91.12
+   1     Max Verstappen   78.12                 90.45
+   2     Charles Leclerc  78.45                 90.78
+   3     Lewis Hamilton   78.67                 91.12
    ...
    ```
 
@@ -123,6 +150,10 @@ F1-2025-Predictions/
 ├── f1_cache/                # Cache directory for FastF1 data
 ├── requirements.txt         # List of dependencies
 ├── README.md                # Project documentation
+├── qualifying_vs_race_times_2024.png
+├── predicted_qualifying_times_2025.png
+├── predicted_race_times_2025.png
+├── qualifying_model_error_distribution.png
 └── (Future scripts for other races will be added here)
 ```
 
